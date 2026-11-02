@@ -1,9 +1,30 @@
 <?php
 
+use PHPFramework\Application;
+
 $start_framework = microtime(true);
 
 if ( PHP_MAJOR_VERSION < 8) {
     die('Require PHP verion >= 8');
 }
 
-//var_dump("Time: ". microtime(true) - $start_framework );
+require_once __DIR__ . '/../config/config.php';
+require_once ROOT . '/vendor/autoload.php';
+require_once HELPERS. '/helpers.php';
+
+$app = new Application();
+
+dump($app);
+
+dump(app());
+
+dump($app->request->isGet());
+dump($app->request->isPost());
+dump($app->request->isAjax());
+
+echo "<hr>";
+
+
+dump(request()->get('page'));
+
+dump(request()->isGet());
