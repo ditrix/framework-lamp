@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "PHPFramework\\": "core/",
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php" : ">= 8.2"
+    }
+}
