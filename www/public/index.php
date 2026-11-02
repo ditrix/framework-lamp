@@ -10,7 +10,21 @@ if ( PHP_MAJOR_VERSION < 8) {
 
 require_once __DIR__ . '/../config/config.php';
 require_once ROOT . '/vendor/autoload.php';
+require_once HELPERS. '/helpers.php';
 
 $app = new Application();
 
-var_dump($app);
+dump($app);
+
+dump(app());
+
+dump($app->request->isGet());
+dump($app->request->isPost());
+dump($app->request->isAjax());
+
+echo "<hr>";
+
+
+dump(request()->get('page'));
+
+dump(request()->isGet());
